@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+    --pons-color: #03af30;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--pons-color);
+}
+
+.wrapper {
+    width: 70%;
+    background-color: #fff;
+    border-radius: 27px;
+    padding: 28px 28px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+@media screen and (max-width: 720px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+.wrapper header span {
+    height: 28px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.wrapper header span img {
+    height: 28px;
+    margin-right: 2px;
+    transform: translateY(5px);
+}
+
+.wrapper .search {
+    margin: 35px 0 18px;
+    position: relative;
+}
+
+#submit-form > input {
+    height: 53px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 0 42px;
+    font-size: 16px;
+}
+
+#submit-form > input:focus {
+    padding: 0 42px;
+    border: 2px solid var(--pons-color);
+}
+
+#submit-form > input::placeholder {
+    color: #b8b8b8;
+}
+
+.search img {
+    position: absolute;
+    top: 50%;
+    color: #999;
+    transform: translateY(-50%);
+}
+
+.search input:focus ~ .magnifying-glass {
+    color: var(--pons-color);
+}
+
+.search #search-item,
+.search #delete-button {
+    height: 52px;
+    width: 32px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    transform: translateY(-100%);
+    background: none;
+    border: none;
+}
+
+.search .delete {
+    width: 18px;
+}
+
+.search #delete-button {
+    right: 0px;
+    display: none;
+}
+
+.search input:valid ~ #delete-button {
+    display: block;
+}
+
+.wrapper .info-text {
+    font-size: 13px;
+    color: #9a9a9a;
+    margin: -3px 0 -10px;
+}
+
+.wrapper .info-text span {
+    font-weight: 500;
+}
+
+.wrapper ul {
+   display: none;
+}
+
+.wrapper.active ul {
+    display: block;
+}
+
+.wrapper ul li {
+    display: block;
+
+    margin-bottom: 5px;
+    padding-bottom: 17px;
+}
+
+#license {
+    margin-top: 20px;
+    display: block;
+}
+
+ul li:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.lang p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.content li {
+    list-style: none;
+}
+
+.content li .details {
+    padding-left: 10px;
+    border-radius: 4px 0 0 4px;
+    border-left: 3px solid var(--pons-color);
+}
+
+.content li .details p {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.content li .details span {
+    font-size: 15px;
+    color: #736e6e;
+}
+
+.synonyms .details .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.synonyms .details .list span {
+    cursor: pointer;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+
+.translation-table {
+    width: 100%;
+}
+
+.translation-table tr {
+    width: 100%;
+}
+
+.translation-table tr td {
+    width: 50%;
+}
+
+#content-list {
+    padding-top: 15px;
+}
+
+/* Buttons styles start */
+.magnifying-glass {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    left: 14px;
+    width: 125%;
+    height: 100%;
+    background: none;
+}
+
+.magnifying-glass:hover, 
+.magnifying-glass:focus {
+    border: none;
+}
+
+#search-item img {
+    width: 18px;
+    left: 14px;
+}
+
+/* PONS Styles */
+h3 {
+    background-color: #eee;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    position: relative;
+    margin-bottom: 10px;
+    border-color: #007b30;
+    padding: 12px 57px 12px 10px;
+}
+
+.arab-title {
+    background-color: #eee;
+    border-color: #d5d5d5;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+    padding: 4px 10px;
+    display: block;
+    font-weight: 700;
+}
+
+/* Superscripts are just numbers that are not necessary for the user */
+.super {
+    display: none;
+}
+
+.definition {
+    font-weight: bold;
+}
+
+.wordclass, 
+.genus, 
+.flexion, 
+.phonetics, 
+.info, 
+.verbclass {
+    color: #808080;
+    font-weight: normal;
+}
+
+.genus, .info {
+    font-style: italic;
+}
+
+li.lang > h2 {
+    margin-bottom: 1.2rem;
+}
