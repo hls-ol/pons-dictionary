@@ -6,9 +6,9 @@
  * @param string &$query A reference to the query string used in the request.
  * @return void
  */
-function error(string $message, string &$query = '') {
+function error(string $message, int $errorCode, string &$query = '') {
     header('Content-Type: application/json');
-    http_response_code(404);
+    http_response_code($errorCode);
   
     echo '{"type": "error", "message": "' . $message . '", "query": "' . $query . '"}';
   

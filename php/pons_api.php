@@ -72,13 +72,13 @@ class PonsAPIQuery {
         $body = $result->getContent();
 
         if($body == null || $body == '') {
-            $errors[ErrorTypes::$NULL] = "Unfortunately there was an error with the word '$this->query'. Maybe try a different word.";
+            $errors[ErrorTypes::$NULL] = ["Unfortunately there was an error with the word '$this->query'. Maybe try a different word.", 404];
 
             return;
         }
         
         if($body == 'Not found') {
-            $errors[ErrorTypes::$NOT_FOUND] = 'Unfortunately the requestet dictionary was not found.';
+            $errors[ErrorTypes::$NOT_FOUND] = ['Unfortunately the requested dictionary was not found.', 400];
             return;
         }
         
@@ -90,7 +90,7 @@ class PonsAPIQuery {
         if(strpos($result->getHeader('content-type'), 'application/json') == false) {
             $contentType = $result->getHeader('content-type');
             
-            $errors[ErrorTypes::$CONTENT_TYPE] = "There was an error with the API. Please come back later. Content-Type was: $contentType.";
+            $errors[ErrorTypes::$CONTENT_TYPE] = ["There was an error with the API. Please come back later. Content-Type was: $contentType.", 503];
             return;
         }
     }
