@@ -19,7 +19,8 @@ A simple PONS dictionary interface to access the [PONS API](https://de.pons.com/
            ]
        ];
     
-       // Set the connection string to '' or null to establish that no connection to the database should be done.
+       // Set the connection string to '' or null
+       // This says that no connection should be made
        $DB_CONNECTION_STRING = '';
        ```
 
