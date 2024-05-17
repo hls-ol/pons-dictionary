@@ -1,0 +1,5 @@
+# Disallows every single Web-Crawler
+
+User-agent: *
+Disallow: /
+Crawl-delay: 120
