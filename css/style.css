@@ -88,9 +88,12 @@ body {
     cursor: pointer;
     display: block;
     position: absolute;
-    transform: translateY(-100%);
     background: none;
     border: none;
+}
+
+.search #search-item {
+    transform: translateY(-100%);
 }
 
 .search .delete {
@@ -98,11 +101,12 @@ body {
 }
 
 .search #delete-button {
-    right: 0px;
+    right: 78px;
     display: none;
+    
 }
 
-.search input:valid ~ #delete-button {
+.search input:valid ~ span #delete-button {
     display: block;
 }
 
@@ -268,4 +272,52 @@ h3 {
 
 li.lang > h2 {
     margin-bottom: 1.2rem;
+}
+
+/* SELECT */
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    line-height: inherit;
+  
+    z-index: 1;
+  
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select option {
+    cursor: pointer;
+    color: #000;
+    
+    font-weight: normal;
+}
+
+#languages {
+    padding: 0 10px;
+    font-size: 16px;
+    height: 53px;
+    cursor: pointer;
+    width: min-content;
+    font-weight: 700;
+    color: #fff;
+}
+
+#right-side {
+    border-radius: 0 5px 5px 0;
+    right: 0px;
+    position: absolute;
+    transform: translateY(-100%);
+    cursor: pointer;
+    background-color: #03af30;
 }

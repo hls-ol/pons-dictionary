@@ -18,6 +18,12 @@ A simple PONS dictionary interface to access the [PONS API](https://de.pons.com/
                'nähmlich' => 'nämlich'
            ]
        ];
+
+       // The dictionaries that should be shown to the user
+       $DICTIONARIES = [
+           'deen' => 'DE - EN', // German to English (and vice versa)
+           'defr' => 'DE - FR', // German to French (and vice versa)
+       ];
     
        // Set the connection string to '' or null
        // This says that no connection should be made
@@ -35,6 +41,12 @@ A simple PONS dictionary interface to access the [PONS API](https://de.pons.com/
             'deen' => [
                 'nähmlich' => 'nämlich'
             ]
+        ];
+
+        // The dictionaries that should be shown to the user
+        $DICTIONARIES = [
+            'deen' => 'DE - EN', // German to English (and vice versa)
+            'defr' => 'DE - FR', // German to French (and vice versa)
         ];
         
         // Database configuration

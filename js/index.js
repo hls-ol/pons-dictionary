@@ -5,6 +5,8 @@ const deleteButton = document.getElementById('delete-button');
 const contentList = document.getElementById('content-list');
 const searchButton = document.getElementById('search-item');
 
+const dictionaries = document.getElementById('languages');
+
 let languageNames = null;
 try {
     languageNames = new Intl.DisplayNames(['de'], {type: 'language'});
@@ -19,10 +21,10 @@ try {
 }
 
 const baseURL = window.location.href.split('/').slice(0, -1).join('/');
-let dictionary = 'deen';
 
 async function fetchAPI(word) {
-    const url = `${baseURL}/search.php?dictionary=${dictionary}&query=${word}`;
+
+    const url = `${baseURL}/search.php?dictionary=${dictionaries.value}&query=${word}`;
     const uri = encodeURI(url);
 
     const data = await fetch(uri);

@@ -1,5 +1,6 @@
 <?php
 $lang = include_once 'php/lang/language.php';
+require_once 'php/defaults.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +21,17 @@ $lang = include_once 'php/lang/language.php';
             <input type="submit" src="" alt="" class="magnifying-glass" value="" />
             <img src="./img/magnifying-glass.svg">
           </span>
-          <span id="delete-button">
-            <img src="./img/xmark.svg" alt="Delete Input" class="delete"/>
+          <span id="right-side">
+            <span id="delete-button">
+              <img src="./img/xmark.svg" alt="Delete Input" class="delete"/>
+            </span>
+            <select name="languages" id="languages">
+              <?php
+                foreach($DICTIONARIES as $key => $value) {
+                  echo "<option value=\"$key\">$value</option>";
+                }
+              ?>
+            </select>
           </span>
         </form>
       </div>
