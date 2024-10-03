@@ -316,8 +316,8 @@ select option {
 #right-side {
     border-radius: 0 5px 5px 0;
     right: 0px;
+    top: 0px;
     position: absolute;
-    transform: translateY(-100%);
     cursor: pointer;
     background-color: #03af30;
 }
